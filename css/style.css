@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
     color: #444;
     background: linear-gradient(to right, #eaeaea, #ffffff);
-    background-image: url("../image/ai-circuit-board-with-neon-lights.jpg");
+    background-image: url('../image/ai-circuit-board-with-neon-lights.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

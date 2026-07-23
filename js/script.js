@@ -108,7 +108,7 @@ function loadPage(page) {
 
                     <li>
                         <a href="#">
-                            <img src="images/ai.jpg" alt="">
+                            <img src="image/ai.jpg" alt="">
                             Artificial Intelligence Basics
                         </a>
                     </li>

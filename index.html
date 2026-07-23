@@ -4,455 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIcademy</title>
-    <style>
-        /* Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #444;
-            background: linear-gradient(to right, #eaeaea, #ffffff);
-            background-image: url("ai-generated-8540915_640.webp");
-            background-size: auto;
-            background-position: center;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #333;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        header nav li {
-            margin-right: 20px;
-        }
-
-        header nav a {
-            color: #337ab7;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        header nav a:hover {
-            color: #23527c;
-        }
-
-        .web-name {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-left: auto; /* Pushes the profile section to the right */
-        }
-
-        .profile img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        /* Main Styles */
-        main {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.3s;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
-        section h1, section h2 {
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        section ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-        }
-
-        section li {
-            margin: 10px;
-            font-size: 16px;
-        }
-
-        section a {
-            color: #337ab7;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-
-        section a:hover {
-            color: #23527c;
-        }
-
-        /* Image Styles */
-        img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Enroll Now Button Styles */
-        .enroll-btn {
-            background-color: #337ab7;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease-in-out, transform 0.3s;
-        }
-
-        .enroll-btn:hover {
-            background-color: #23527c;
-            transform: scale(1.05);
-        }
-
-        /* Login Form Styles */
-        .login-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .login-form input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-form button {
-            background-color: #337ab7;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .login-form button:hover {
-            background-color: #23527c;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .testimonial {
-            font-style: italic;
-            margin: 10px 0;
-        }
-
-        .author {
-            font-weight: bold;
-            color: #337ab7;
-        }
-
-        /* Contact Info Styles */
-        .contact-info {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .contact-info h2 {
-            margin-bottom: 10px;
-        }
-
-        .social-media {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .social-media li {
-            margin: 0 10px;
-        }
-
-        .social-media img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s;
-        }
-
-        .social-media img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #333;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        footer ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        footer li {
-            margin-right: 20px;
-        }
-
-        footer a {
-            color: #337ab7;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-
-        footer a:hover {
-            color: #23527c;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            main {
-                padding: 20px;
-            }
-
-            section {
-                padding: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section h1, section h2 {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <header>
         <nav>
             <span class="web-name">AIcademy</span>
+
             <ul>
                 <li><a href="#" onclick="loadPage('home')">Home</a></li>
                 <li><a href="#" onclick="loadPage('courses')">Courses</a></li>
                 <li><a href="#" onclick="loadPage('about')">About</a></li>
                 <li><a href="#" onclick="loadPage('contact')">Contact Us</a></li>
             </ul>
+
             <div class="profile">
-                <img src="logo.jpeg" alt="Account Icon">
+                <img src="images/logo.jpeg" alt="Account Icon">
                 <a href="#" onclick="loadPage('login')">Login</a>
             </div>
         </nav>
     </header>
+
     <main>
         <div class="container" id="content">
-            <!-- Default content loaded -->
+
             <section>
                 <h1>Welcome to AIcademy</h1>
+
                 <p>Your gateway to AI learning!</p>
+
                 <h2>Why Learn AI?</h2>
-                <p>Artificial Intelligence is transforming the world we live in. From self-driving cars to virtual assistants, AI is at the forefront of innovation. Equip yourself with the skills to thrive in this exciting field!</p>
+
+                <p>
+                    Artificial Intelligence is transforming the world we live in.
+                    From self-driving cars to virtual assistants, AI is at the
+                    forefront of innovation. Equip yourself with the skills to
+                    thrive in this exciting field!
+                </p>
             </section>
+
             <section>
+
                 <h2>The Future of AI</h2>
-                <p>AI is set to revolutionize industries and redefine the way we interact with technology. By 2030, AI could contribute up to $15 trillion to the global economy. Be part of this change!</p>
-                <button class="enroll-btn">Start Learning Today</button>
+
+                <p>
+                    AI is set to revolutionize industries and redefine the way
+                    we interact with technology. By 2030, AI could contribute
+                    up to $15 trillion to the global economy.
+                </p>
+
+                <button class="enroll-btn">
+                    Start Learning Today
+                </button>
+
             </section>
+
             <section class="placements">
+
                 <h2>Students Placed</h2>
+
                 <p>Our learners are making waves in the industry!</p>
+
                 <ul>
                     <li>Tushar Kamdi - Data Scientist at TechCorp</li>
                     <li>Manthan Narad - AI Engineer at InnovateAI</li>
                     <li>Sagar Chandankhede - Machine Learning Specialist at FutureTech</li>
                     <li>Shiv Kasat - Research Scientist at AI Labs</li>
                 </ul>
+
             </section>
+
         </div>
     </main>
 
     <footer>
+
         <ul>
             <li><a href="#">Terms of Use</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">FAQ</a></li>
         </ul>
+
     </footer>
 
-    <script>
-        function loadPage(page) {
-            const content = document.getElementById('content');
-            content.innerHTML = ''; // Clear existing content
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
-            if (page === 'home') {
-                content.innerHTML = `
-                    <section>
-                        <h1>Welcome to AIcademy</h1>
-                        <p>Your gateway to AI learning!</p>
-                        <h2>Why Learn AI?</h2>
-                        <p>Artificial Intelligence is transforming the world we live in. From self-driving cars to virtual assistants, AI is at the forefront of innovation. Equip yourself with the skills to thrive in this exciting field!</p>
-                    </section>
-                    <section>
-                        <h2>The Future of AI</h2>
-                        <p>AI is set to revolutionize industries and redefine the way we interact with technology. By 2030, AI could contribute up to $15 trillion to the global economy. Be part of this change!</p>
-                        <button class="enroll-btn">Start Learning Today</button>
-                    </section>
-                    <section class="placements">
-                        <h2>Students Placed</h2>
-                        <p>Our learners are making waves in the industry!</p>
-                        <ul>
-                            <li>Tushar Kamdi - Data Scientist at TechCorp</li>
-                            <li>Manthan Narad - AI Engineer at InnovateAI</li>
-                            <li>Sagar Chandankhede - Machine Learning Specialist at FutureTech</li>
-                            <li>Shiv Kasat - Research Scientist at AI Labs</li>
-                        </ul>
-                    </section>
-                `;
-            } else if (page === 'courses') {
-                content.innerHTML = `
-                    <section>
-                        <h1>AI Courses</h1>
-                        <ul>
-                            <li><a href="#"><img src="istockphoto-1452604857-612x612.jpg" alt="Machine Learning">Machine Learning</a></li>
-                            <li><a href="#"><img src="Deep-Learning-vs-Machine-Learning.jpg" alt="Deep Learning">Deep Learning</a></li>
-                            <li><a href="#"><img src="Natural-Language-Processing-1.png" alt="Natural Language Processing">Natural Language Processing</a></li>
-                            <li><a href="#"><img src="Deep-Learning-vs-Machine-Learning.jpg" alt="Computer Vision">Computer Vision</a></li>
-                        </ul>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </section>
-                    <section>
-                        <h1>AI Tutorials</h1>
-                        <ul>
-                            <li><a href="#"><img src="DS-With-Python-Banner.jpg" alt="Python for AI">Python for AI</a></li>
-                            <li><a href="#"><img src="ai.jpg" alt="AI tutorial">Artificial Intelligence Basics</a></li>
-                            <li><a href="#"><img src="pytorch.png" alt="PyTorch Tutorial">PyTorch Tutorial</a></li>
-                            <li><a href="#"><img src="keras.png" alt="Keras Tutorial">Keras Tutorial</a></li>
-                        </ul>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </section>
-                `;
-            } else if (page === 'about') {
-                content.innerHTML = `
-                    <section>
-                        <h1>About Us</h1>
-                        <p>We are dedicated to providing the best AI education online.</p>
-                        <p>Our mission is to empower learners with the knowledge they need to succeed in the field of Artificial Intelligence.</p>
-                    </section>
-                    <section class="testimonials">
-                        <h2>What Our Students Say</h2>
-                        <div class="testimonial">"The courses are well-structured and easy to follow!"</div>
-                        <div class="author">- Kashish Singh</div>
-                        <div class="testimonial">"I learned so much in a short time, highly recommend!"</div>
-                        <div class="author">- Diksha Jambhule</div>
-                        <div class="testimonial">"The hands-on projects helped me apply what I learned!"</div>
-                        <div class="author">- Shri Prasad</div>
-                    </section>
-                `;
-            } else if (page === 'contact') {
-                content.innerHTML = `
-                    <section>
-                        <h1>Contact Us</h1>
-                        <p>If you have any questions, suggestions, or feedback, we'd love to hear from you! Please fill out the form below, and our team will get back to you as soon as possible.</p>
-                        <form>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <input type="tel" placeholder="Your Phone Number" required>
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
-                        <div class="contact-info">
-                            <h2>Alternatively, you can reach us at:</h2>
-                            <p>Email: <a href="mailto:support@aicademy.com">support@aicademy.com</a></p>
-                            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                            <p>Follow us on social media:</p>
-                            <ul class="social-media">
-                                <li><a href="#"><img src="fb.png" alt="Facebook"></a></li>
-                                <li><a href="#"><img src="twi.png" alt="Twitter"></a></li>
-                                <li><a href="#"><img src="lin.png" alt="LinkedIn"></a></li>
-                            </ul>
-                        </div>
-                    </section>
-                `;
-            } else if (page === 'login') {
-                content.innerHTML = `
-                    <section class="login-form">
-                        <h1>Login</h1>
-                        <form>
-                            <input type="text" placeholder="Username" required>
-                            <input type="password" placeholder="Password" required>
-                            <button type="submit">Login</button>
-                        </form>
-                    </section>
-                `;
-            }
-        }
-    </script>
 </body>
 </html>
-

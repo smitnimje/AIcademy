@@ -59,28 +59,28 @@ function loadPage(page) {
 
                     <li>
                         <a href="#">
-                            <img src="images/istockphoto-1452604857-612x612.jpg" alt="">
+                            <img src="image/istockphoto-1452604857-612x612.jpg" alt="">
                             Machine Learning
                         </a>
                     </li>
 
                     <li>
                         <a href="#">
-                            <img src="images/Deep-Learning-vs-Machine-Learning.jpg" alt="">
+                            <img src="image/Deep-Learning-vs-Machine-Learning.jpg" alt="">
                             Deep Learning
                         </a>
                     </li>
 
                     <li>
                         <a href="#">
-                            <img src="images/Natural-Language-Processing-1.png" alt="">
+                            <img src="image/Natural-Language-Processing-1.png" alt="">
                             Natural Language Processing
                         </a>
                     </li>
 
                     <li>
                         <a href="#">
-                            <img src="images/Deep-Learning-vs-Machine-Learning.jpg" alt="">
+                            <img src="image/Deep-Learning-vs-Machine-Learning.jpg" alt="">
                             Computer Vision
                         </a>
                     </li>
@@ -101,7 +101,7 @@ function loadPage(page) {
 
                     <li>
                         <a href="#">
-                            <img src="images/DS-With-Python-Banner.jpg" alt="">
+                            <img src="image/DS-With-Python-Banner.jpg" alt="">
                             Python for AI
                         </a>
                     </li>
@@ -115,14 +115,14 @@ function loadPage(page) {
 
                     <li>
                         <a href="#">
-                            <img src="images/pytorch.png" alt="">
+                            <img src="image/pytorch.png" alt="">
                             PyTorch Tutorial
                         </a>
                     </li>
 
                     <li>
                         <a href="#">
-                            <img src="images/keras.png" alt="">
+                            <img src="image/keras.png" alt="">
                             Keras Tutorial
                         </a>
                     </li>
@@ -260,19 +260,19 @@ function loadPage(page) {
 
                         <li>
                             <a href="#">
-                                <img src="images/fb.png" alt="Facebook">
+                                <img src="image/fb.png" alt="Facebook">
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                <img src="images/twi.png" alt="Twitter">
+                                <img src="image/twi.png" alt="Twitter">
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                <img src="images/lin.png" alt="LinkedIn">
+                                <img src="image/lin.png" alt="LinkedIn">
                             </a>
                         </li>
 
